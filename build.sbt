@@ -1,38 +1,38 @@
 import sbt.Keys._
 
-ThisBuild / scalaVersion := "2.12.12"
+ThisBuild / scalaVersion := "2.13.4"
 ThisBuild / organization := "org.locationtech.geotrellis"
-ThisBuild / crossScalaVersions := List("2.12.12", "2.11.12")
+ThisBuild / crossScalaVersions := List("2.13.4") // , "2.12.12", "2.11.12")
 
 lazy val root = Project("geotrellis", file("."))
   .aggregate(
-    accumulo,
-    `accumulo-spark`,
-    cassandra,
-    `cassandra-spark`,
-    `doc-examples`,
-    gdal,
-    `gdal-spark`,
-    geotools,
-    hbase,
-    `hbase-spark`,
-    layer,
-    macros,
-    mdoc,
+//    accumulo,
+//    `accumulo-spark`,
+//    cassandra,
+//    `cassandra-spark`,
+//    `doc-examples`,
+//    gdal,
+//    `gdal-spark`,
+//    geotools,
+//    hbase,
+//    `hbase-spark`,
+//    layer,
+//    macros,
+//    mdoc,
     proj4,
-    raster,
-    `raster-testkit`,
-    s3,
-    `s3-spark`,
-    shapefile,
-    spark,
-    `spark-pipeline`,
-    `spark-testkit`,
-    store,
+//    raster,
+//    `raster-testkit`,
+//    s3,
+//    `s3-spark`,
+//    shapefile,
+//    spark,
+//    `spark-pipeline`,
+//    `spark-testkit`,
+//    store,
     util,
     vector,
-    `vector-testkit`,
-    vectortile
+    `vector-testkit`
+//    vectortile
   )
   .enablePlugins(ScalaUnidocPlugin)
   .settings(Settings.commonSettings)

@@ -56,7 +56,7 @@ object Settings {
     "-language:existentials",
     "-language:experimental.macros",
     "-feature",
-    "-Ypartial-unification", // required by Cats
+//    "-Ypartial-unification", // required by Cats
     // "-Yrangepos",            // required by SemanticDB compiler plugin
     // "-Ywarn-unused-import",  // required by `RemoveUnused` rule
     "-target:jvm-1.8")
@@ -90,8 +90,8 @@ object Settings {
     credentials ++= List(Path.userHome / ".ivy2" / ".credentials").filter(_.asFile.canRead).map(Credentials(_)),
 
     addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.2" cross CrossVersion.full),
-    addCompilerPlugin("org.scalamacros" %% "paradise" % "2.1.1" cross CrossVersion.full),
-    addCompilerPlugin("org.scalameta" % "semanticdb-scalac" % "4.3.20" cross CrossVersion.full),
+//    addCompilerPlugin("org.scalamacros" %% "paradise" % "2.1.1" cross CrossVersion.full),
+    addCompilerPlugin("org.scalameta" % "semanticdb-scalac" % "4.4.8" cross CrossVersion.full),
 
     pomExtra := (
       <developers>

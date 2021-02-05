@@ -18,7 +18,7 @@ import sbt._
 
 object Version {
   val geotools    = "23.2"
-  val spire       = "0.13.0"
+  val spire       = "0.17.0"
   val accumulo    = "1.9.3"
   val cassandra   = "3.7.2"
   val hbase       = "2.2.5"
@@ -38,6 +38,7 @@ object Dependencies {
     CrossVersion.partialVersion(scalaVersion.value) match {
       case Some((2, 11)) => for211
       case Some((2, 12)) => for212
+      case Some((2, 13)) => for212
       case _ => sys.error("not good")
     }
   }
@@ -77,7 +78,7 @@ object Dependencies {
   val jts                 = "org.locationtech.jts"        % "jts-core"                 % "1.16.1"
   val proj4j              = "org.locationtech.proj4j"     % "proj4j"                   % "1.1.1"
   val openCSV             = "com.opencsv"                 % "opencsv"                  % "5.2"
-  val spire               = "org.spire-math"             %% "spire"                    % Version.spire
+  val spire               = "org.typelevel"              %% "spire"                    % Version.spire
   val spireMacro          = "org.spire-math"             %% "spire-macros"             % Version.spire
   val apacheIO            = "commons-io"                  % "commons-io"               % "2.7"
   val apacheLang3         = "org.apache.commons"          % "commons-lang3"            % "3.10"
