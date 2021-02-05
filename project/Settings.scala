@@ -391,15 +391,15 @@ object Settings {
       import geotrellis.store.hbase._
       """
   ) ++ commonSettings ++ noForkInTests
-
-  lazy val macros = Seq(
-    name := "geotrellis-macros",
-    Compile / sourceGenerators += (Compile / sourceManaged).map(Boilerplate.genMacro).taskValue,
-    libraryDependencies ++= Seq(
-      spireMacro,
-      scalaReflect(scalaVersion.value)
-    )
-  ) ++ commonSettings
+//
+//  lazy val macros = Seq(
+//    name := "geotrellis-macros",
+//    Compile / sourceGenerators += (Compile / sourceManaged).map(Boilerplate.genMacro).taskValue,
+//    libraryDependencies ++= Seq(
+//      spireMacro,
+//      scalaReflect(scalaVersion.value)
+//    )
+//  ) ++ commonSettings
 
   lazy val mdoc = Seq(
     name := "geotrellis-mdoc",
